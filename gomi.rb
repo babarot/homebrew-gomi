@@ -5,7 +5,7 @@ class Gomi < Formula
   version '0.1.4'
 
   if Hardware.is_64_bit?
-    url "https://github.com/b4b4r07/gomi/releases/download/v0.1.4/gomi_darwin_amd64"
+    url "https://github.com/b4b4r07/gomi/releases/download/v0.1.4/gomi_darwin_amd64.zip"
     sha1 "3543835615a15d55f4b2899a6f0889ce94d029baebae9ab818d70166e1110fea"
   else
     url "https://github.com/b4b4r07/gomi/releases/download/v0.1.4/gomi_darwin_386.zip"
