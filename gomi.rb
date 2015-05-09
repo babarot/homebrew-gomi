@@ -13,14 +13,14 @@ class Gomi < Formula
         sha1 "53450d3023a9d136d9748bfcdc881d461b862748"
         KIND="386"
     end
-    url "https://github.com/sindresorhus/osx-trash/releases/download/1.0.0/trash.zip"
-    sha1 "9d3794f3a6f7a2eb5130713200a2fbc5f6b807be"
 
     def install
         system 'mv', "gomi_darwin_#{KIND}", 'gomi'
         bin.install 'gomi'
         zsh_completion.install "completions/zsh/_gomi"
-        bin.install 'trash' => 'osx-trash'
+        wget "https://github.com/sindresorhus/osx-trash/releases/download/1.0.0/trash.zip"
+        unzip "trash.zip"
+        bin.install 'trash' => '/usr/local/binosx-trash'
     end
 
     def caveats; <<-EOS.undent
