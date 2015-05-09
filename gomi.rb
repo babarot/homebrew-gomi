@@ -14,7 +14,7 @@ class Gomi < Formula
         KIND="386"
     end
     url "https://github.com/sindresorhus/osx-trash/releases/download/1.0.0/trash.zip"
-    sha1 "8861994d946e627ffd6c4b72265fa86f5ba2c821"
+    sha1 "9d3794f3a6f7a2eb5130713200a2fbc5f6b807be"
 
     def install
         system 'mv', "gomi_darwin_#{KIND}", 'gomi'
