@@ -21,7 +21,7 @@ class Gomi < Formula
         zsh_completion.install "_gomi"
         system "curl -L https://github.com/sindresorhus/osx-trash/releases/download/1.0.0/trash.zip -o trash.zip"
         system "unzip trash.zip"
-        bin.install 'trash' => '/usr/local/binosx-trash'
+        bin.install 'trash' => 'osx-trash'
     end
 
     def caveats; <<-EOS.undent
