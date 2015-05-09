@@ -17,7 +17,8 @@ class Gomi < Formula
     def install
         system 'mv', "gomi_darwin_#{KIND}", 'gomi'
         bin.install 'gomi'
-        zsh_completion.install "completions/zsh/_gomi"
+        system "wget -qO - https://raw.githubusercontent.com/b4b4r07/gomi/master/completions/zsh/_gomi >_gomi"
+        zsh_completion.install "_gomi"
         wget "https://github.com/sindresorhus/osx-trash/releases/download/1.0.0/trash.zip"
         unzip "trash.zip"
         bin.install 'trash' => '/usr/local/binosx-trash'
