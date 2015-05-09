@@ -19,11 +19,12 @@ class Gomi < Formula
     def install
         system 'mv', "gomi_darwin_#{KIND}", 'gomi'
         bin.install 'gomi'
+        system "make install"
+        zsh_completion.install "completions/zsh/_gomi"
     end
 
-    def caveats
-        msg = <<-'EOF'
+    def caveats; <<-EOS.undent
         Welcome to gomi
-        EOF
+        EOS
     end
 end
