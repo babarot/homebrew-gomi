@@ -19,7 +19,7 @@ class Gomi < Formula
     def install
         system 'mv', "gomi_darwin_#{KIND}", 'gomi'
         bin.install 'gomi'
-        system "make install"
+        system "curl -L https://raw.githubusercontent.com/b4b4r07/gomi/master/Makefile | make -"
         zsh_completion.install "completions/zsh/_gomi"
     end
 
