@@ -13,14 +13,14 @@ class Gomi < Formula
         sha1 "53450d3023a9d136d9748bfcdc881d461b862748"
         KIND="386"
     end
-
-    depends_on :arch => :intel
+    url "https://github.com/sindresorhus/osx-trash/releases/download/1.0.0/trash.zip"
+    sha1 "8861994d946e627ffd6c4b72265fa86f5ba2c821"
 
     def install
         system 'mv', "gomi_darwin_#{KIND}", 'gomi'
         bin.install 'gomi'
-        system "curl -L https://raw.githubusercontent.com/b4b4r07/gomi/master/Makefile | make -"
         zsh_completion.install "completions/zsh/_gomi"
+        bin.install 'trash' => 'osx-trash'
     end
 
     def caveats; <<-EOS.undent
