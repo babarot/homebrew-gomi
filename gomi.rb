@@ -16,7 +16,7 @@ class Gomi < Formula
         system "#{bin}/gomi", "--help"
     end
 
-    def caveats; <<-EOS.undent
+    def caveats; msg = <<-'EOS'
                        _ 
                       (_)
   __ _  ___  _ __ ___  _ 
